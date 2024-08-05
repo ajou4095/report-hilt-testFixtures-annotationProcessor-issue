@@ -1,0 +1,65 @@
+[versions]
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.5.1"
+appcompat = "1.7.0"
+material = "1.10.0"
+
+plugin-gradle = "8.5.1"
+androidx-test = "1.6.1"
+androidx-test-ext-junit = "1.2.1"
+androidx-test-ext-truth = "1.6.0"
+# Kotlin
+kotlin = "2.0.0"
+ksp = "2.0.0-1.0.24"
+coroutines = "1.8.1"
+kotlinx-datetime = "0.5.0"
+# Hilt
+hilt = "2.51.1"
+hilt-compose = "1.2.0"
+# Test
+junit4 = "4.13.2"
+robolectric = "4.13"
+
+[libraries]
+# Kotlin
+kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+# Hilt
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hilt-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-compose" }
+# Test
+junit4 = { module = "junit:junit", version = "junit4" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+androidx-test-core = { module = "androidx.test:core", version.ref = "androidx-test" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test" }
+androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidx-test" }
+androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-ext-junit" }
+androidx-test-ext-truth = { module = "androidx.test.ext:truth", version.ref = "androidx-test-ext-truth" }
+robolectric-robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "plugin-gradle" }
+android-library = { id = "com.android.library", version.ref = "plugin-gradle" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+[bundles]
+kotlin = ["kotlin", "kotlinx-coroutines-android", "kotlinx-coroutines-core", "kotlinx-datetime"]
+test = ["junit4", "kotlinx-coroutines-test", "hilt-android-testing", "androidx-test-core",
+    "androidx-test-runner", "androidx-test-rules", "androidx-test-ext-junit",
+    "androidx-test-ext-truth", "robolectric-robolectric"]
