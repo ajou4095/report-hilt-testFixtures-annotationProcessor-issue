@@ -19,7 +19,7 @@ import org.robolectric.annotation.Config
     application = HiltTestApplication::class,
     manifest = Config.NONE
 )
-class TokenRepositoryTest {
+class HiltTest {
 
     @get:Rule
     var hiltRule = HiltAndroidRule(this)
