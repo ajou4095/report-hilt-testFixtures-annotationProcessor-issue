@@ -36,6 +36,8 @@ class TokenRepositoryTest {
     @Test
     fun checkSomeString() = runTest {
         println("someString: $someString")
+        // To be "Test" instead of "Main"
+
         assert(someString != "Main")
         assert(someString == "Test")
     }
