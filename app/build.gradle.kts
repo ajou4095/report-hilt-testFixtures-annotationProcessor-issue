@@ -56,12 +56,12 @@ dependencies {
 
     implementation(libs.bundles.kotlin)
     implementation(libs.hilt.android)
-    annotationProcessor(libs.hilt.android.compiler)
+    ksp(libs.hilt.android.compiler)
 
     testImplementation(testFixtures(project(":app")))
 
     testImplementation(libs.bundles.test)
-    testAnnotationProcessor(libs.hilt.android.compiler)
+    kspTest(libs.hilt.android.compiler)
 
     testFixturesImplementation(libs.bundles.kotlin)
     testFixturesImplementation(libs.hilt.android)
